@@ -17,6 +17,7 @@ namespace StatePattern.Enemy
             stateMachine.ChangeState(States.IDLE);
         }
 
+
         private void CreateStateMachine() => stateMachine = new OnePunchManStateMachine(this);
 
         public override void UpdateEnemy()
@@ -34,5 +35,15 @@ namespace StatePattern.Enemy
         }
 
         public override void PlayerExitedRange() => stateMachine.ChangeState(States.IDLE);
+
+
     }
 }
+public enum States {
+    IDLE,
+    SHOOTING,
+    ROTATING,
+    CHASING,
+    PATROLLING
+}
+

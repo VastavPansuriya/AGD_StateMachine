@@ -6,7 +6,7 @@ public class GenericStateMachine<T> where T : EnemyController
 {
     protected T Owner;
     protected IState currentState;
-    protected Dictionary<States, IState> States = new Dictionary<States, IState>();
+    protected Dictionary<States, IState> allStates = new Dictionary<States, IState>();
 
     public GenericStateMachine(T Owner) => this.Owner = Owner;
 
@@ -15,15 +15,15 @@ public class GenericStateMachine<T> where T : EnemyController
     protected void ChangeState(IState newState)
     {
         currentState?.OnStateExit();
-        currentState = newState;
+        currentState = newState; 
         currentState?.OnStateEnter();
     }
 
-    public void ChangeState(States newState) => ChangeState(States[newState]);
+    public void ChangeState(States newState) => ChangeState(allStates[newState]);
 
     protected void SetOwner()
     {
-        foreach (IState state in States.Values)
+        foreach (IState state in allStates.Values)
         {
             state.Owner = Owner;
         }
