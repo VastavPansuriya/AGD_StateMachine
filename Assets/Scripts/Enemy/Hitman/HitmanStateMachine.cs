@@ -3,6 +3,8 @@ using StatePattern.StateMachine;
 
 public class HitmanStateMachine : GenericStateMachine<HitmanController>
 {
+    private CloneManController cloneManController;
+
     public HitmanStateMachine(HitmanController Owner) : base(Owner)
     {
         this.Owner = Owner;

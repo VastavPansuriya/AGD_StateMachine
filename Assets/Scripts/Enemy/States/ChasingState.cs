@@ -10,7 +10,7 @@ namespace StatePattern.Enemy
     {
         public EnemyController Owner { get; set; }
         private GenericStateMachine<T> stateMachine;
-        private PlayerController target;
+        private PlayerController target;    
 
         public ChasingState(GenericStateMachine<T> stateMachine) => this.stateMachine = stateMachine;
 

@@ -17,7 +17,7 @@ namespace StatePattern.StateMachine
         {
             currentState?.OnStateExit();
             currentState = newState;
-            currentState?.OnStateEnter();
+            currentState?.OnStateEnter();   
         }
 
         public void ChangeState(States newState) => ChangeState(States[newState]);
