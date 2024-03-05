@@ -29,5 +29,9 @@ namespace StatePattern.StateMachine
                 state.Owner = Owner;
             }
         }
+
+
     }
+
+
 }
