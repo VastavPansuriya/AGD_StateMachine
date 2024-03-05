@@ -89,7 +89,7 @@ namespace StatePattern.Player
             playerView.PlayAttackVFX();
             if (enemiesInRange.Count > 0)
             {
-                SoundService.PlaySoundEffects(SoundType.PLAYER_ATTACK);
+               SoundService.PlaySoundEffects(SoundType.PLAYER_ATTACK);
                 foreach (EnemyController enemy in enemiesInRange)
                 {
                     enemy.Die();

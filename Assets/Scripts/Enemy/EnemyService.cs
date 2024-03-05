@@ -26,7 +26,6 @@ namespace StatePattern.Enemy
         private void SubscribeToEvents() => GameService.Instance.EventService.OnLevelSelected.AddListener(SpawnEnemies);
 
         private void UnsubscribeToEvents() => GameService.Instance.EventService.OnLevelSelected.RemoveListener(SpawnEnemies);
-        public void AddEnemy(EnemyController enemy) => activeEnemies.Add(enemy);
 
         public void SpawnEnemies(int levelId)
         {

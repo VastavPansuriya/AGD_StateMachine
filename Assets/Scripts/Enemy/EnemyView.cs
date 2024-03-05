@@ -82,9 +82,5 @@ namespace StatePattern.Enemy
             Destroy(gameObject);
         }
 
-        public void SetColor(EnemyColorData colorType)
-        {
-            enemyGraphic.color = colorType == EnemyColorData.Default ? Color.white : Color.blue;
-        }
     }
 }

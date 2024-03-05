@@ -7,7 +7,6 @@ namespace StatePattern.StateMachine
         SHOOTING,
         PATROLLING,
         CHASING,
-        TELEPORTING,
-        CLONING
+        TELEPORTING
     }
 }

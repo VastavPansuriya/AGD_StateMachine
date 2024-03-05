@@ -5,7 +5,6 @@
         OnePunchMan,
         PatrolMan,
         Hitman,
-        CloneMan,
         Robot
     }
 }
